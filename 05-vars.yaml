@@ -1,0 +1,32 @@
+- name: first variable
+  hosts: web
+  vars:
+    TODAY: friday
+    DATE: 10th JAN
+    YEAR: 2025
+  tasks:
+  - name: first playbook
+    ansible.builtin.debug:
+      msg: "I want to let you know that today is {{TODAY}}, date is {{DATE}} and year is {{YEAR}}"
+
+- name: second variable
+  hosts: database
+  vars:
+    FLIGHT: Indigo
+    SOURCE: India
+    DESTINATION: Singapore
+  tasks:
+  - name: second playbook
+    ansible.builtin.debug:
+      msg: "Genereally i will come from {{SOURCE}} to {{SOURCE}} by {{FLIGHT}} carrier"
+
+- name: third variable
+  hosts: localhost
+  vars:
+    FOOD: rooti
+    DRINK: bear
+    STARTER: chicken65
+  tasks:
+  - name: third playbook
+    ansible.builtin.debug:
+      msg: "Today i eat {{FOOD}} with {{DRINK}} amd starter {{STARTER}}"
