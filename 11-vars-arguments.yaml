@@ -1,0 +1,6 @@
+- name: variables from files
+  hosts: database
+  tasks:
+  - name: first playbook
+    ansible.builtin.debug:
+      msg: "I want to let you know that today is {{TODAY}}, date is {{DATE}} and year is {{YEAR}}"
