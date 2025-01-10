@@ -1,6 +1,6 @@
 - name: first variable
   hosts: web
-  vars:
+  vars: # Play level veriables
     TODAY: friday
     DATE: 10th JAN
     YEAR: 2025
@@ -11,13 +11,13 @@
 
 - name: second variable
   hosts: database
-  vars:
+  vars: # Play level veriables
     FLIGHT: Indigo
     SOURCE: India
     DESTINATION: Singapore
   tasks:
   - name: second playbook
-    vars:
+    vars:  # Task level variables are accessible only with in the task. Task variables can override play level variables
       SOURCE: America
     ansible.builtin.debug:
       msg: "Genereally i will come from {{SOURCE}} to {{DESTINATION}} by {{FLIGHT}} carrier"
