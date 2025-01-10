@@ -1,0 +1,23 @@
+- name: first variable
+  hosts: web
+  vars:
+    TODAY: friday
+    DATE: 10th JAN
+    YEAR: 2025
+  tasks:
+  - name: first playbook
+    ansible.builtin.debug:
+      msg: "I want to let you know that today is {{TODAY}}, date is {{DATE}} and year is {{YEAR}}"
+
+- name: second variable
+  hosts: database
+  vars:
+    FLIGHT: Indigo
+    SOURCE: India
+    DESTINATION: Singapore
+  tasks:
+  - name: second playbook
+    vars:
+      SOURCE: America
+    ansible.builtin.debug:
+      msg: "Genereally i will come from {{SOURCE}} to {{DESTINATION}} by {{FLIGHT}} carrier"
