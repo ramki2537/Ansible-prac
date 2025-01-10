@@ -1,0 +1,14 @@
+- name: variables from files
+  hosts: local
+  connection: local
+  vars_promt:
+  - name: TODAY
+    prompt: Enter today name
+  - name: DATE
+    prompt: Enter this month name
+  - name: YEAR
+    prompt: Enter year information
+  tasks:
+  - name: first playbook
+    ansible.builtin.debug:
+      msg: "I want to let you know that today is {{TODAY}}, date is {{DATE}} and year is {{YEAR}}"
