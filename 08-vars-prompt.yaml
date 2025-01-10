@@ -4,10 +4,13 @@
   vars_prompt:
   - name: TODAY
     prompt: Enter today name
+    private: false
   - name: DATE
     prompt: Enter this month name
+    private: false
   - name: YEAR
     prompt: Enter year information
+    private: false
   tasks:
   - name: first playbook
     ansible.builtin.debug:
