@@ -18,7 +18,7 @@
   tasks:
   - name: second playbook
     ansible.builtin.debug:
-      msg: "Genereally i will come from {{SOURCE}} to {{SOURCE}} by {{FLIGHT}} carrier"
+      msg: "Genereally i will come from {{SOURCE}} to {{DESTINATION}} by {{FLIGHT}} carrier"
 
 - name: third variable
   hosts: localhost
