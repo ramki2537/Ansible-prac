@@ -1,5 +1,6 @@
 - name: Install nginx
   hosts: web
+  become: yes
   tasks:
   - name: install nginx if RHEL
     ansible.builtin.dnf:
