@@ -1,0 +1,10 @@
+- name: loops
+  hosts: database
+  tasks:
+  - name: loop function
+    ansible.builtin.debug:
+      msg: " Display {{ item }}"
+    loop:
+      - Rama
+      - Jay
+      - Lov
