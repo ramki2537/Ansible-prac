@@ -1,0 +1,10 @@
+- name: loop function
+  hosts: databse
+  tasks:
+  - name: install software using loop
+    ansible.builtin.package:
+      name: {{ item }}
+      state: installed
+    loop:
+      - git
+      - mysql
